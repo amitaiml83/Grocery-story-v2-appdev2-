@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monthly User Report</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 20px;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <h2>Monthly User Report</h2>
+
+  <h3>User Information:</h3>
+  <p><strong>User ID:</strong> {{ user.id }}</p>
+  <p><strong>Email:</strong> {{ user.email }}</p>
+
+  {% if orders %}
+    <h3>Orders:</h3>
+    <table>
+      <tr>
+        <th>Order ID</th>
+        <th>Order Date</th>
+      </tr>
+      {% for order in orders %}
+      <tr>
+        <td>{{ order.id }}</td>
+        <td>{{ order.order_date }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <h3>Transactions:</h3>
+    <table>
+      <tr>
+        <th>Transaction ID</th>
+        <th>Transaction Date</th>
+        <th>Total Amount</th>
+      </tr>
+      {% for transaction in transactions %}
+      <tr>
+        <td>{{ transaction.id }}</td>
+        <td>{{ transaction.transaction_date }}</td>
+        <td>{{ transaction.total_amount }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  {% else %}
+    <p>You have no orders in this month. Please visit our site for shopping:</p>
+  {% endif %}
+
+  <p>Thank you for using our services. If you have any questions, feel free to contact us.</p>
+
+  <p>Best regards,<br>
+    [My Store]</p>
+</body>
+</html>
