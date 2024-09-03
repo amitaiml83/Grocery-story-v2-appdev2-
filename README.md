@@ -30,28 +30,51 @@ Welcome to the **Online Grocery Store App** repository! This project is a robust
 
 ```bash
 📦 online-grocery-store
-├── 📁 backend
-│   ├── 📁 app
-│   │   ├── 📁 templates
-│   │   ├── 📁 static
-│   │   ├── 📄 __init__.py
-│   │   └── ... (Other Flask app files)
-│   ├── 📄 celery_worker.py
-│   └── ... (Other backend files)
-├── 📁 frontend
-│   ├── 📁 src
-│   │   ├── 📁 components
-│   │   ├── 📄 App.vue
-│   │   └── ... (Other Vue.js files)
-├── 📄 Dockerfile
-├── 📄 docker-compose.yml
-├── 📄 README.md
-└── ... (Other project files)
+├── 📁 __pycache__
+├── 📁 application
+├── 📁 instance
+├── 📁 monthlyreports
+├── 📁 static
+├── 📁 templates
+├── 📄 celerybeat-schedule
+├── 📄 celeryconfig.py
+├── 📄 config.py
+├── 📄 main.py
+├── 📄 requirement.txt
+└── 📄 upload_initial_data.py
+  - application/: Contains the main application logic, including routes and models
+  - instance/: Holds instance-specific files, like the database.
+  - monthlyreports/: Contains reports generated monthly.
+  - static/: Houses static files like CSS, JavaScript, and images.
+  - templates/: Includes HTML templates for the app.
+  - celerybeat-schedule: A file used by Celery Beat for scheduling tasks.
+  - celeryconfig.py: Configuration file for Celery.
+  - config.py: General configuration file for the Flask application.
+  - main.py: The entry point of the application.
+  - requirement.txt: Lists all Python dependencies.
+  - upload_initial_data.py: Script for uploading initial data into the application.
+## 🛠️ Installation & Setup
+1. Clone the Repository:
 
-#🛠️ Installation & Setup
-Clone the Repository:
+    bash
+  Copy code
+  git clone https://github.com/amitaiml83/online-grocery-store.git
+  cd online-grocery-store
+2. Backend Setup:
 
-```bash
-Copy code
-git clone https://github.com/amitaiml83/online-grocery-store.git
-cd online-grocery-store
+  Create a virtual environment and activate it:
+  bash
+  Copy code
+  python3 -m venv venv
+  source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+3. Install the required packages:
+  bash
+  Copy code
+  pip install -r requirement.txt
+4. Run the Flask app:
+   bash
+  flask run
+5. Running Celery Worker:
+   Start the Celery worker:
+   bash
+   celery -A celeryconfig.celery worker --loglevel=info
