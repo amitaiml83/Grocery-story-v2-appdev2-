@@ -87,11 +87,11 @@ celery -A main.celery worker --loglevel=info
 8. Start Celery Beat for scheduled tasks:
 ```bash
 celery -A main.celery beat --loglevel=info
-
-📬 Contributing
+```
+# 📬 Contributing
 - Contributions are welcome! Please fork the repository and create a pull request with your improvements.
 
-📝 License
+# 📝 License
 - This project is licensed under the MIT License.
 
 # Feel free to reach out if you have any questions or need further assistance.
