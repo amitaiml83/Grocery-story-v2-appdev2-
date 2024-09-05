@@ -58,31 +58,31 @@ Welcome to the **Online Grocery Store App** repository! This project is a robust
 
 ## 🛠️ Installation
 1. Clone the repository:
-``bash
+```bash
 git clone https://github.com/yourusername/online-grocery-store.git
-
+```
 2. Change directory:
 ```bash
 cd online-grocery-store
-
+```
 3. Install the dependencies:
 ``bash
 pip install -r requirements.txt
-
+```
 4. Configure your environment settings in config.py.
 
 5. Initialize the database:
 ``bash
 python upload_initial_data.py
-
+```
 6. Run the application:
 ``bash
 python main.py
-
+```
 7. Start the Celery worker:
-
 ```bash
 celery -A main.celery worker --loglevel=info
+```
 
 8. Start Celery Beat for scheduled tasks:
 
