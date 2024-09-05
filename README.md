@@ -42,16 +42,16 @@ Welcome to the **Online Grocery Store App** repository! This project is a robust
 ├── 📄 main.py
 ├── 📄 requirement.txt
 └── 📄 upload_initial_data.py
+```
 
-
-application/: Contains the main application logic, including routes and models
-instance/: Holds instance-specific files, like the database.
-monthlyreports/: Contains reports generated monthly.
-static/: Houses static files like CSS, JavaScript, and images.
-templates/: Includes HTML templates for the app.
-celerybeat-schedule: A file used by Celery Beat for scheduling tasks.
-celeryconfig.py: Configuration file for Celery.
-config.py: General configuration file for the Flask application.
-main.py: The entry point of the application.
-requirement.txt: Lists all Python dependencies.
-upload_initial_data.py: Script for uploading initial data into the application.
+- application/: Contains the main application logic, including routes and models
+- instance/: Holds instance-specific files, like the database
+- monthlyreports/: Contains reports generated monthly.
+- static/: Houses static files like CSS, JavaScript, and images.
+- templates/: Includes HTML templates for the app.
+- celerybeat-schedule: A file used by Celery Beat for scheduling tasks.
+- celeryconfig.py: Configuration file for Celery.
+- config.py: General configuration file for the Flask application.
+- main.py: The entry point of the application.
+- requirement.txt: Lists all Python dependencies.
+- upload_initial_data.py: Script for uploading initial data into the application.
