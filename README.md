@@ -59,7 +59,7 @@ Welcome to the **Online Grocery Store App** repository! This project is a robust
 ## 🛠️ Installation
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/online-grocery-store.git
+git clone https://github.com/amitaiml83/Grocery-story-v2-appdev2-.git
 ```
 2. Change directory:
 ```bash
@@ -87,3 +87,14 @@ celery -A main.celery worker --loglevel=info
 8. Start Celery Beat for scheduled tasks:
 ```bash
 celery -A main.celery beat --loglevel=info
+
+📬 Contributing
+- Contributions are welcome! Please fork the repository and create a pull request with your improvements.
+
+📝 License
+- This project is licensed under the MIT License.
+
+# Feel free to reach out if you have any questions or need further assistance.
+
+```vbnet
+Let me know if you'd like to adjust anything!
