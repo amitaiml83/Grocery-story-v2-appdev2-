@@ -72,11 +72,11 @@ pip install -r requirements.txt
 4. Configure your environment settings in config.py.
 
 5. Initialize the database:
-``bash
+```bash
 python upload_initial_data.py
 ```
 6. Run the application:
-``bash
+```bash
 python main.py
 ```
 7. Start the Celery worker:
@@ -85,6 +85,5 @@ celery -A main.celery worker --loglevel=info
 ```
 
 8. Start Celery Beat for scheduled tasks:
-
 ```bash
 celery -A main.celery beat --loglevel=info
