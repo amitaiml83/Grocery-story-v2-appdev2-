@@ -66,7 +66,7 @@ git clone https://github.com/yourusername/online-grocery-store.git
 cd online-grocery-store
 ```
 3. Install the dependencies:
-``bash
+```bash
 pip install -r requirements.txt
 ```
 4. Configure your environment settings in config.py.
